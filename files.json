@@ -4,13 +4,22 @@
             "path": "001-trivial/minimal-document.pdf",
             "producer": "pdfTeX-1.40.23",
             "pages": 1,
-            "creation_date": "2022-04-03T18:05:42+02:00"
+            "creation_date": "2022-04-03T18:05:42+02:00",
+            "images": 0
         },
         {
             "path": "002-trivial-libre-office-writer/002-trivial-libre-office-writer.pdf",
             "producer": "Libre Office Writer",
             "pages": 1,
-            "creation_date": "2022-04-03T19:31:02+02:00"
+            "creation_date": "2022-04-03T19:31:02+02:00",
+            "images": 0
+        },
+        {
+            "path": "003-pdflatex-image/pdflatex-image.pdf",
+            "producer": "pdfTeX-1.40.23",
+            "pages": 1,
+            "creation_date": "2022-04-03T19:47:32+02:00",
+            "images": 1
         }
     ]
 }
