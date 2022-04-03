@@ -20,6 +20,13 @@
             "pages": 1,
             "creation_date": "2022-04-03T19:47:32+02:00",
             "images": 1
+        },
+        {
+            "path": "004-pdflatex-4-pages/pdflatex-4-pages.pdf",
+            "producer": "pdfTeX-1.40.23",
+            "pages": 4,
+            "creation_date": "2022-04-03T19:59:45+02:00",
+            "images": 0
         }
     ]
 }
