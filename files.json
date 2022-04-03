@@ -2,8 +2,15 @@
     "data": [
         {
             "path": "001-trivial/minimal-document.pdf",
-            "generator": "pdflatex",
-            "pages": 1
+            "producer": "pdfTeX-1.40.23",
+            "pages": 1,
+            "creation_date": "2022-04-03T18:05:42+02:00"
+        },
+        {
+            "path": "002-trivial-libre-office-writer/002-trivial-libre-office-writer.pdf",
+            "producer": "Libre Office Writer",
+            "pages": 1,
+            "creation_date": "2022-04-03T19:31:02+02:00"
         }
     ]
 }

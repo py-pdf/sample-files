@@ -1,16 +1,22 @@
+import datetime
 import json
-from pydantic import BaseModel
-from typing import List
 import os
 import sys
+from typing import List
+
+from pydantic import BaseModel
+
 
 class PdfEntry(BaseModel):
     path: str
-    generator: str
+    producer: str
     pages: int
+    creation_date: datetime.datetime
+
 
 class MainPdfFile(BaseModel):
-    data: List[PdfEntry]
+    data: list[PdfEntry]
+
 
 def main():
     with open("files.json") as f:
@@ -26,6 +32,7 @@ def main():
             print(f"Found {entry.path}")
     if seen_failure:
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
