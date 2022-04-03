@@ -4,14 +4,15 @@ import os
 import sys
 from typing import List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, NonNegativeInt
 
 
 class PdfEntry(BaseModel):
     path: str
     producer: str
-    pages: int
+    pages: NonNegativeInt
     creation_date: datetime.datetime
+    images: NonNegativeInt
 
 
 class MainPdfFile(BaseModel):
