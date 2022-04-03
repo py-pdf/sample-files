@@ -27,6 +27,13 @@
             "pages": 4,
             "creation_date": "2022-04-03T19:59:45+02:00",
             "images": 0
+        },
+        {
+            "path": "005-libreoffice-writer-password/libreoffice-writer-password.pdf",
+            "producer": "Libre Office Writer",
+            "creation_date": "2022-04-03T20:37:00+02:00",
+            "pages": 1,
+            "images": 0
         }
     ]
 }
