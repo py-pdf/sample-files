@@ -1,0 +1,9 @@
+{
+    "data": [
+        {
+            "path": "001-trivial/minimal-document.pdf",
+            "generator": "pdflatex",
+            "pages": 1
+        }
+    ]
+}
