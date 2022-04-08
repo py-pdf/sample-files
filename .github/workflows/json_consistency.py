@@ -10,10 +10,12 @@ from pydantic import BaseModel, NonNegativeInt
 
 class PdfEntry(BaseModel):
     path: str
+    encrypted: bool
     producer: str
     pages: NonNegativeInt
-    creation_date: datetime.datetime
     images: NonNegativeInt
+    forms: NonNegativeInt
+    creation_date: datetime.datetime
 
 
 class MainPdfFile(BaseModel):
