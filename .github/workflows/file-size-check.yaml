@@ -25,8 +25,8 @@ jobs:
       uses: tj-actions/changed-files@v18.4
     - name: List all changed files
       run: |
-        # MAXSIZE is 1 MB
-        MAXSIZE=1000000
+        # MAXSIZE is 10 MB
+        MAXSIZE=10000000
         for FILENAME in ${{ steps.changed-files.outputs.all_changed_files }}; do
           FILESIZE=$(stat -c%s "$FILENAME")
           echo "Size of $FILENAME = $FILESIZE bytes."
