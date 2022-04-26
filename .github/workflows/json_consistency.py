@@ -11,10 +11,12 @@ from PyPDF2 import PdfFileReader
 
 class PdfEntry(BaseModel):
     path: str
+    encrypted: bool
     producer: str
     pages: NonNegativeInt
-    creation_date: datetime.datetime
     images: Optional[NonNegativeInt]
+    forms: NonNegativeInt
+    creation_date: datetime.datetime
 
 
 class MainPdfFile(BaseModel):
@@ -56,7 +58,7 @@ def pdf_to_datetime(date_str):
         print(f"❌ ERROR: Invalid date: {date_str}")
     return datetime.datetime(
         int(date_str[0:4]),  # year
-        int(date_str[4:6]), # month
+        int(date_str[4:6]),  # month
         int(date_str[6:8]),  # day
         int(date_str[8:10]),  # hour
         int(date_str[10:12]),  # minute
@@ -77,9 +79,7 @@ def check_meta(entry: PdfEntry):
     pdf_date = pdf_to_datetime(info.get("/CreationDate")).isoformat()
     entry_date = entry.creation_date.isoformat()[:19]
     if pdf_date != entry_date:
-        print(
-            f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}"
-        )
+        print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
     # if entry.images is not None:
     #     if info.get("/XObject") is None:
     #         if entry.images > 0:

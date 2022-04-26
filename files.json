@@ -5,84 +5,117 @@
             "producer": "pdfTeX-1.40.23",
             "pages": 1,
             "creation_date": "2022-04-03T18:05:42+02:00",
-            "images": 0
+            "encrypted": false,
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "002-trivial-libre-office-writer/002-trivial-libre-office-writer.pdf",
             "producer": "LibreOffice 6.4",
             "pages": 1,
             "creation_date": "2022-04-03T19:31:02+02:00",
-            "images": 0
+            "encrypted": false,
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "003-pdflatex-image/pdflatex-image.pdf",
             "producer": "pdfTeX-1.40.23",
             "pages": 1,
             "creation_date": "2022-04-03T19:47:32+02:00",
-            "images": 1
+            "encrypted": false,
+            "images": 1,
+            "forms": 0
         },
         {
             "path": "004-pdflatex-4-pages/pdflatex-4-pages.pdf",
             "producer": "pdfTeX-1.40.23",
             "pages": 4,
             "creation_date": "2022-04-03T19:59:45+02:00",
-            "images": 0
+            "encrypted": false,
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "005-libreoffice-writer-password/libreoffice-writer-password.pdf",
             "producer": "Libre Office Writer",
             "creation_date": "2022-04-03T20:37:00+02:00",
+            "encrypted": true,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "006-pdflatex-outline/pdflatex-outline.pdf",
             "producer": "pdfTeX-1.40.23",
             "creation_date": "2022-04-06T20:15:41+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "007-imagemagick-images/imagemagick-ASCII85Decode.pdf",
             "producer": "https://imagemagick.org",
             "creation_date": "2022-04-15T12:01:34+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "007-imagemagick-images/imagemagick-images.pdf",
             "producer": "https://imagemagick.org",
             "creation_date": "2022-04-15T11:38:26+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "007-imagemagick-images/imagemagick-CCITTFaxDecode.pdf",
             "producer": "https://imagemagick.org",
             "creation_date": "2022-04-15T12:06:59+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "007-imagemagick-images/imagemagick-lzw.pdf",
             "producer": "https://imagemagick.org",
             "creation_date": "2022-04-15T11:42:09+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "008-reportlab-inline-image/inline-image.pdf",
             "producer": "ReportLab PDF Library - www.reportlab.com",
             "creation_date": "2022-04-15T13:30:24+02:00",
+            "encrypted": false,
             "pages": 1,
-            "images": 0
+            "images": 0,
+            "forms": 0
         },
         {
             "path": "009-pdflatex-geotopo/GeoTopo.pdf",
             "producer": "pdfTeX-1.40.16",
             "creation_date": "2016-12-31T18:43:23+02:00",
+            "encrypted": false,
             "pages": 117,
-            "images": null
+            "images": null,
+            "forms": 0
+        },
+        {
+            "path": "010-pdflatex-forms/pdflatex-forms.pdf",
+            "producer": "pdfTeX-1.40.23",
+            "creation_date": "2022-04-08T19:47:23+02:00",
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 1
         }
     ]
 }
