@@ -116,6 +116,15 @@
             "pages": 1,
             "images": 0,
             "forms": 1
+        },
+        {
+            "path": "011-google-doc-document/google-doc-document.pdf",
+            "producer": "Skia/PDF m103 Google Docs Renderer",
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0
         }
     ]
 }

@@ -16,7 +16,7 @@ class PdfEntry(BaseModel):
     pages: NonNegativeInt
     images: Optional[NonNegativeInt]
     forms: NonNegativeInt
-    creation_date: datetime.datetime
+    creation_date: Optional[datetime.datetime]
 
 
 class MainPdfFile(BaseModel):
@@ -50,7 +50,9 @@ def main():
         sys.exit(1)
 
 
-def pdf_to_datetime(date_str):
+def pdf_to_datetime(date_str: Optional[str]) -> Optional[datetime.datetime]:
+    if date_str is None:
+        return None
     if not date_str.startswith("D:"):
         print(f"❌ ERROR: Invalid date: {date_str}")
     date_str = date_str[2:]
@@ -76,8 +78,9 @@ def check_meta(entry: PdfEntry):
             f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}"
         )
 
-    pdf_date = pdf_to_datetime(info.get("/CreationDate")).isoformat()
-    entry_date = entry.creation_date.isoformat()[:19]
+    pdf_date = pdf_to_datetime(info.get("/CreationDate"))
+    pdf_date = None if pdf_date is None else pdf_date.isoformat()
+    entry_date = None if entry.creation_date is None else entry.creation_date.isoformat()[:19]
     if pdf_date != entry_date:
         print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
     # if entry.images is not None:
