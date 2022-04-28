@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import List, Optional
 
 from pydantic import BaseModel, NonNegativeInt
+
 from PyPDF2 import PdfFileReader
 
 
@@ -80,7 +81,9 @@ def check_meta(entry: PdfEntry):
 
     pdf_date = pdf_to_datetime(info.get("/CreationDate"))
     pdf_date = None if pdf_date is None else pdf_date.isoformat()
-    entry_date = None if entry.creation_date is None else entry.creation_date.isoformat()[:19]
+    entry_date = (
+        None if entry.creation_date is None else entry.creation_date.isoformat()[:19]
+    )
     if pdf_date != entry_date:
         print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
     # if entry.images is not None:
