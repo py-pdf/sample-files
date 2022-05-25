@@ -7,7 +7,7 @@ from typing import List, Optional
 
 from pydantic import BaseModel, NonNegativeInt
 
-from PyPDF2 import PdfFileReader
+from PyPDF2 import PdfReader
 
 
 class PdfEntry(BaseModel):
@@ -70,10 +70,10 @@ def pdf_to_datetime(date_str: Optional[str]) -> Optional[datetime.datetime]:
 
 
 def check_meta(entry: PdfEntry):
-    reader = PdfFileReader(entry.path)
-    if reader.isEncrypted:
+    reader = PdfReader(entry.path)
+    if reader.is_encrypted:
         return
-    info = reader.getDocumentInfo()
+    info = reader.metadata
     if info.get("/Producer") != entry.producer:
         print(
             f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}"

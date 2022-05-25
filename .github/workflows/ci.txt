@@ -4,9 +4,9 @@
 #
 #    pip-compile .github/workflows/ci.in
 #
-pydantic==1.9.0
+pydantic==1.9.1
     # via -r .github/workflows/ci.in
-pypdf2==1.27.9
+pypdf2==1.28.2
     # via -r .github/workflows/ci.in
-typing-extensions==4.1.1
+typing-extensions==4.2.0
     # via pydantic
