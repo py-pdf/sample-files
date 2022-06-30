@@ -129,7 +129,16 @@
         {
             "path": "012-libreoffice-form/libreoffice-form.pdf",
             "producer": "LibreOffice 6.4",
-            "creation_date": "2022-06-26T10:52:54+02:00",
+            "creation_date": "2022-06-26T10:58:43+02:00",
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 1
+        },
+        {
+            "path": "013-reportlab-overlay/reportlab-overlay.pdf",
+            "producer": "PyPDF2",
+            "creation_date": null,
             "encrypted": false,
             "pages": 1,
             "images": 0,
