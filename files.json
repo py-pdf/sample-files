@@ -152,6 +152,24 @@
             "pages": 4,
             "images": 0,
             "forms": 0
+        },
+        {
+            "path": "015-arabic/habibi.pdf",
+            "producer": "weasyprint-54.1",
+            "creation_date": "2022-07-17T13:00:00",
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 0
+        },
+        {
+            "path": "015-arabic/habibi-oneline-cmap.pdf",
+            "producer": "weasyprint-54.1+manual",
+            "creation_date": "2022-07-17T13:00:00",
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 0
         }
     ]
 }
