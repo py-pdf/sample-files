@@ -155,8 +155,8 @@
         },
         {
             "path": "015-arabic/habibi.pdf",
-            "producer": "weasyprint-54.1",
-            "creation_date": "2022-07-17T13:00:00",
+            "producer": "WeasyPrint 54.1",
+            "creation_date": null,
             "encrypted": false,
             "pages": 1,
             "images": 0,
@@ -164,8 +164,17 @@
         },
         {
             "path": "015-arabic/habibi-oneline-cmap.pdf",
-            "producer": "weasyprint-54.1+manual",
-            "creation_date": "2022-07-17T13:00:00",
+            "producer": "WeasyPrint 54.1",
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 0
+        },
+        {
+            "path": "016-libre-office-link/libre-office-link.pdf",
+            "producer": "LibreOffice 6.4",
+            "creation_date": "2022-07-31T11:48:53",
             "encrypted": false,
             "pages": 1,
             "images": 0,
