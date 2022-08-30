@@ -179,6 +179,15 @@
             "pages": 1,
             "images": 0,
             "forms": 0
+        },
+        {
+            "path": "017-unreadable-meta-data/unreadablemetadata.pdf",
+            "producer": "?",
+            "creation_date": "2022-07-31T11:48:53",
+            "encrypted": false,
+            "pages": 4,
+            "images": 0,
+            "forms": 0
         }
     ]
 }

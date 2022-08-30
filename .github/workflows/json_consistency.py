@@ -70,10 +70,13 @@ def pdf_to_datetime(date_str: Optional[str]) -> Optional[datetime.datetime]:
 
 
 def check_meta(entry: PdfEntry):
-    reader = PdfReader(entry.path)
-    if reader.is_encrypted:
+    try:
+        reader = PdfReader(entry.path)
+        if reader.is_encrypted:
+            return
+        info = reader.metadata
+    except Exception:
         return
-    info = reader.metadata
     if info.get("/Producer") != entry.producer:
         print(
             f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}"
