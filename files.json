@@ -188,6 +188,15 @@
             "pages": 4,
             "images": 0,
             "forms": 0
+        },
+        {
+            "path": "018-base64-image/base64image.pdf",
+            "producer": "PDF Annotator 8.0.0.837",
+            "creation_date": "2022-09-20T08:15:17",
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0
         }
     ]
 }
