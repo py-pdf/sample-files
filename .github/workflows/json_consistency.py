@@ -77,6 +77,8 @@ def check_meta(entry: PdfEntry):
         info = reader.metadata
     except Exception:
         return
+    if info is None:
+        info = {}
     if info.get("/Producer") != entry.producer:
         print(
             f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}"
