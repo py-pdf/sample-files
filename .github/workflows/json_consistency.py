@@ -7,7 +7,7 @@ from typing import List, Optional
 
 from pydantic import BaseModel, NonNegativeInt
 
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 
 
 class PdfEntry(BaseModel):

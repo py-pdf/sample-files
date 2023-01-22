@@ -6,7 +6,7 @@
 weasyprint habibi.html habibi.pdf
 ```
 
-See also https://github.com/py-pdf/PyPDF2/issues/1111
+See also https://github.com/py-pdf/pypdf/issues/1111
 
 # CMap Structure
 
