@@ -91,14 +91,6 @@ def check_meta(entry: PdfEntry):
     )
     if pdf_date != entry_date:
         print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
-    # if entry.images is not None:
-    #     if info.get("/XObject") is None:
-    #         if entry.images > 0:
-    #             print(f"❌ ERROR: No XObject, but {entry.images} expected")
-    #     elif len(info.get("/XObject")) != entry.images:
-    #         print(
-    #             f"❌ ERROR: XObject count mismatch: {entry.images} vs {len(info.get('/XObject'))}"
-    #         )
 
 
 if __name__ == "__main__":
