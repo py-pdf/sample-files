@@ -24,7 +24,7 @@ class MainPdfFile(BaseModel):
     data: List[PdfEntry]
 
 
-def main():
+def main() -> None:
     with open("files.json") as f:
         data = json.load(f)
     main_pdf = MainPdfFile.parse_obj(data)
@@ -69,7 +69,7 @@ def pdf_to_datetime(date_str: Optional[str]) -> Optional[datetime.datetime]:
     )
 
 
-def check_meta(entry: PdfEntry):
+def check_meta(entry: PdfEntry) -> None:
     try:
         reader = PdfReader(entry.path)
         if reader.is_encrypted:
