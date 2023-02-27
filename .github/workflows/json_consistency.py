@@ -1,6 +1,5 @@
 import datetime
 import json
-import os
 import sys
 from pathlib import Path
 from typing import List, Optional
@@ -33,7 +32,7 @@ def main() -> None:
     seen_failure = False
     for entry in main_pdf.data:
         registered_pdfs.append(entry.path)
-        if not os.path.exists(entry.path):
+        if not Path(entry.path).exists():
             print(f"❌ ERROR: File not found: {entry.path}")
             seen_failure = True
         else:
