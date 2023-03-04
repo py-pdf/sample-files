@@ -2,7 +2,6 @@ import datetime
 import json
 import sys
 from pathlib import Path
-from typing import List, Optional
 
 from pydantic import BaseModel, NonNegativeInt
 
@@ -14,13 +13,13 @@ class PdfEntry(BaseModel):
     encrypted: bool
     producer: str
     pages: NonNegativeInt
-    images: Optional[NonNegativeInt]
+    images: NonNegativeInt | None
     forms: NonNegativeInt
-    creation_date: Optional[datetime.datetime]
+    creation_date: datetime.datetime | None
 
 
 class MainPdfFile(BaseModel):
-    data: List[PdfEntry]
+    data: list[PdfEntry]
 
 
 def main() -> None:
@@ -50,7 +49,7 @@ def main() -> None:
         sys.exit(1)
 
 
-def pdf_to_datetime(date_str: Optional[str]) -> Optional[datetime.datetime]:
+def pdf_to_datetime(date_str: str | None) -> datetime.datetime | None:
     if date_str is None:
         return None
     if not date_str.startswith("D:"):
@@ -80,7 +79,7 @@ def check_meta(entry: PdfEntry) -> None:
         info = {}
     if info.get("/Producer") != entry.producer:
         print(
-            f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}"
+            f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}",
         )
 
     pdf_date = pdf_to_datetime(info.get("/CreationDate"))
