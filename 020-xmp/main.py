@@ -1,6 +1,8 @@
 import io
-from fpdf import FPDF
+from pathlib import Path
+
 import fitz
+from fpdf import FPDF
 
 # Create a simple PDF using fpdf2
 output = io.BytesIO()
@@ -48,6 +50,4 @@ doc.save(output_filename)
 doc.close()
 
 # Remove the temporary input file
-import os
-
-os.remove(input_filename)
+Path(input_filename).unlink()
