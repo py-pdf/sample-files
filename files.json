@@ -206,6 +206,15 @@
             "pages": 1,
             "images": 1,
             "forms": 0
+        },
+        {
+            "path": "020-xmp/output_with_metadata_pymupdf.pdf",
+            "producer": "",
+            "creation_date": "2022-09-20T08:15:17",
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0
         }
     ]
 }
