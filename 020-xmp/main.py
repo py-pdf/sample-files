@@ -26,12 +26,14 @@ xmp_metadata = """<?xpacket begin="\xef\xbb\xbf" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.0-c060 61.134777, 2010/02/12-17:32:00">
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <rdf:Description rdf:about=""
-            xmlns:dc="http://purl.org/dc/elements/1.1/">
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            dc:source="Martin Thoma">
             <dc:creator>
                 <rdf:Seq>
                     <rdf:li>John Doe</rdf:li>
                 </rdf:Seq>
             </dc:creator>
+            <dc:description>This is a text</dc:description>
             <dc:date>1990-04-28</dc:date>
             <dc:title>
                 <rdf:Alt>
