@@ -8,7 +8,7 @@ from fpdf import FPDF
 output = io.BytesIO()
 pdf = FPDF()
 pdf.add_page()
-pdf.set_font("Arial", size=12)
+pdf.set_font("Helvetica", size=12)
 pdf.cell(200, 10, txt="Hello, World!", ln=1, align="C")
 pdf.output(name=output)
 output.seek(0)
@@ -32,6 +32,7 @@ xmp_metadata = """<?xpacket begin="\xef\xbb\xbf" id="W5M0MpCehiHzreSzNTczkc9d"?>
                     <rdf:li>John Doe</rdf:li>
                 </rdf:Seq>
             </dc:creator>
+            <dc:date>1990-04-28</dc:date>
             <dc:title>
                 <rdf:Alt>
                     <rdf:li xml:lang="x-default">Sample PDF with XMP Metadata</rdf:li>
