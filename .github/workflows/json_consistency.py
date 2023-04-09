@@ -23,6 +23,7 @@ class MainPdfFile(BaseModel):
 
 
 def main() -> None:
+    """Check the consistency of the JSON metadata file."""
     with open("files.json") as f:
         data = json.load(f)
     main_pdf = MainPdfFile.parse_obj(data)
@@ -50,6 +51,7 @@ def main() -> None:
 
 
 def pdf_to_datetime(date_str: str | None) -> datetime.datetime | None:
+    """Convert a PDF datetime string to a datetime object."""
     if date_str is None:
         return None
     if not date_str.startswith("D:"):
@@ -68,6 +70,7 @@ def pdf_to_datetime(date_str: str | None) -> datetime.datetime | None:
 
 
 def check_meta(entry: PdfEntry) -> None:
+    """Check if the given entry metadata matches the extracted metadata."""
     try:
         reader = PdfReader(entry.path)
         if reader.is_encrypted:
