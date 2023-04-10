@@ -27,7 +27,10 @@ xmp_metadata = """<?xpacket begin="\xef\xbb\xbf" id="W5M0MpCehiHzreSzNTczkc9d"?>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <rdf:Description rdf:about=""
             xmlns:dc="http://purl.org/dc/elements/1.1/"
-            dc:source="Martin Thoma">
+            xmlns:pdfx='http://ns.adobe.com/pdfx/1.3/'
+            dc:source="Martin Thoma"
+            pdfx:other="worlds">
+            <pdfx:Style>FooBarStyle</pdfx:Style>
             <dc:creator>
                 <rdf:Seq>
                     <rdf:li>John Doe</rdf:li>
