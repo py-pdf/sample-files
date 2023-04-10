@@ -29,7 +29,8 @@ xmp_metadata = """<?xpacket begin="\xef\xbb\xbf" id="W5M0MpCehiHzreSzNTczkc9d"?>
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:pdfx='http://ns.adobe.com/pdfx/1.3/'
             dc:source="Martin Thoma"
-            pdfx:other="worlds">
+            pdfx:other="worlds"
+            pdfx:ↂ23F0="time">
             <pdfx:Style>FooBarStyle</pdfx:Style>
             <dc:creator>
                 <rdf:Seq>
