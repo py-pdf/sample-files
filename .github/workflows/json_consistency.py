@@ -11,7 +11,7 @@ from pypdf import PdfReader
 class PdfEntry(BaseModel):
     path: str
     encrypted: bool
-    producer: str
+    producer: str | None
     pages: NonNegativeInt
     images: NonNegativeInt | None
     forms: NonNegativeInt

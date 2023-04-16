@@ -163,6 +163,15 @@
             "forms": 0
         },
         {
+            "path": "015-arabic/habibi-rotated.pdf",
+            "producer": "pypdf",
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 4,
+            "images": 0,
+            "forms": 0
+        },
+        {
             "path": "015-arabic/habibi-oneline-cmap.pdf",
             "producer": "WeasyPrint 54.1",
             "creation_date": null,
@@ -200,8 +209,8 @@
         },
         {
             "path": "019-grayscale-image/grayscale-image.pdf",
-            "producer": "",
-            "creation_date": "2022-09-20T08:15:17",
+            "producer": null,
+            "creation_date": null,
             "encrypted": false,
             "pages": 1,
             "images": 1,
@@ -209,8 +218,8 @@
         },
         {
             "path": "020-xmp/output_with_metadata_pymupdf.pdf",
-            "producer": "",
-            "creation_date": "2022-09-20T08:15:17",
+            "producer": null,
+            "creation_date": "2023-04-10T07:46:54",
             "encrypted": false,
             "pages": 1,
             "images": 1,
