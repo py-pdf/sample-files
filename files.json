@@ -224,6 +224,15 @@
             "pages": 1,
             "images": 1,
             "forms": 0
+        },
+        {
+            "path": "021-pdfa/crazyones-pdfa.pdf",
+            "producer": null,
+            "creation_date": "2023-04-10T07:46:54",
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0
         }
     ]
 }
