@@ -109,6 +109,15 @@
             "forms": 0
         },
         {
+            "path": "009-pdflatex-geotopo/GeoTopo-komprimiert.pdf",
+            "producer": "3-Heights™ PDF Optimization Shell 6.3.1.5 (http://www.pdf-tools.com)",
+            "creation_date": "2016-12-31T18:43:23+02:00",
+            "encrypted": false,
+            "pages": 117,
+            "images": null,
+            "forms": 0
+        },
+        {
             "path": "010-pdflatex-forms/pdflatex-forms.pdf",
             "producer": "pdfTeX-1.40.23",
             "creation_date": "2022-04-08T19:47:23+02:00",
@@ -227,8 +236,8 @@
         },
         {
             "path": "021-pdfa/crazyones-pdfa.pdf",
-            "producer": null,
-            "creation_date": "2023-04-10T07:46:54",
+            "producer": "GPL Ghostscript 10.00.0",
+            "creation_date": "2023-04-23T17:59:04",
             "encrypted": false,
             "pages": 1,
             "images": 1,
