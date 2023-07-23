@@ -40,7 +40,7 @@ def main() -> None:
             check_meta(entry)
 
     # Are all files registered?
-    pdf_paths = Path(".").glob("**/*.pdf")
+    pdf_paths = Path().glob("**/*.pdf")
     for pdf_path in pdf_paths:
         if str(pdf_path) not in registered_pdfs:
             print(f"❌ ERROR: File not registered: {pdf_path}")
