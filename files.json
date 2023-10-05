@@ -251,6 +251,16 @@
             "pages": 1,
             "images": 1,
             "forms": 0
+        },
+        {
+            "path": "023-cmyk-image/cmyk-image.pdf",
+            "producer": null,
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0
         }
+
     ]
 }
