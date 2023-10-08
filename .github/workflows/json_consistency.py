@@ -9,12 +9,18 @@ from pypdf import PdfReader
 
 
 class AnnotationCount(BaseModel):
+    Highlight: int | None
+    Ink: int | None
     Link: int | None
+    Text: int | None
     Widget: int | None
 
     def items(self) -> list[tuple[str, int]]:
         return [
+            ("Highlight", self.Highlight if self.Highlight else 0),
             ("Link", self.Link if self.Link else 0),
+            ("Ink", self.Ink if self.Ink else 0),
+            ("Text", self.Text if self.Text else 0),
             ("Widget", self.Widget if self.Widget else 0),
         ]
 
@@ -135,7 +141,7 @@ def check_meta(entry: PdfEntry) -> None:
         seen_subtypes = []
         for subtype, exp_count in sorted(entry.annotations.items()):
             seen_subtypes.append(subtype)
-            if exp_count == 0 and pdf_annotations.get(subtype, 0) == 0:
+            if exp_count == pdf_annotations.get(subtype, 0):
                 continue
             print(
                 f"          - {subtype}: {exp_count} vs {pdf_annotations.get(subtype, 0)}"

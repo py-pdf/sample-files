@@ -144,7 +144,9 @@
             "pages": 1,
             "images": 0,
             "forms": 1,
-            "annotations": {"Widget": 3}
+            "annotations": {
+                "Widget": 3
+            }
         },
         {
             "path": "011-google-doc-document/google-doc-document.pdf",
@@ -164,7 +166,9 @@
             "pages": 1,
             "images": 0,
             "forms": 1,
-            "annotations": {"Widget": 9}
+            "annotations": {
+                "Widget": 9
+            }
         },
         {
             "path": "013-reportlab-overlay/reportlab-overlay.pdf",
@@ -184,7 +188,9 @@
             "pages": 4,
             "images": 0,
             "forms": 0,
-            "annotations": {"Link": 9}
+            "annotations": {
+                "Link": 9
+            }
         },
         {
             "path": "015-arabic/habibi.pdf",
@@ -224,7 +230,9 @@
             "pages": 1,
             "images": 0,
             "forms": 0,
-            "annotations": {"Link": 1}
+            "annotations": {
+                "Link": 1
+            }
         },
         {
             "path": "017-unreadable-meta-data/unreadablemetadata.pdf",
@@ -295,6 +303,20 @@
             "images": 1,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "024-annotations/annotated_pdf.pdf",
+            "producer": "produced by FPDF2",
+            "creation_date": "1990-04-28T00:00:00",
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0,
+            "annotations": {
+                "Text": 1,
+                "Highlight": 1,
+                "Ink": 1
+            }
         }
     ]
 }
