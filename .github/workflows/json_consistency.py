@@ -8,6 +8,20 @@ from pydantic import BaseModel, NonNegativeInt
 from pypdf import PdfReader
 
 
+class AnnotationCount(BaseModel):
+    Link: int | None
+    Widget: int | None
+
+    def items(self) -> list[tuple[str, int]]:
+        return [
+            ("Link", self.Link if self.Link else 0),
+            ("Widget", self.Widget if self.Widget else 0),
+        ]
+
+    def sum(self):
+        return sum(value for _, value in self.items())
+
+
 class PdfEntry(BaseModel):
     path: str
     encrypted: bool
@@ -16,6 +30,7 @@ class PdfEntry(BaseModel):
     images: NonNegativeInt | None
     forms: NonNegativeInt
     creation_date: datetime.datetime | None
+    annotations: AnnotationCount
 
 
 class MainPdfFile(BaseModel):
@@ -69,6 +84,19 @@ def pdf_to_datetime(date_str: str | None) -> datetime.datetime | None:
     )
 
 
+def get_annotation_counts(reader: PdfReader) -> dict[str, int]:
+    pdf_annotations = {}
+    for page in reader.pages:
+        if page.annotations:
+            for annot in page.annotations:
+                annot_obj = annot.get_object()
+                subtype = annot_obj["/Subtype"][1:]
+                if subtype not in pdf_annotations:
+                    pdf_annotations[subtype] = 0
+                pdf_annotations[subtype] += 1
+    return pdf_annotations
+
+
 def check_meta(entry: PdfEntry) -> None:
     """Check if the given entry metadata matches the extracted metadata."""
     try:
@@ -92,6 +120,36 @@ def check_meta(entry: PdfEntry) -> None:
     )
     if pdf_date != entry_date:
         print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
+
+    # Check annotations
+    pdf_annotations = get_annotation_counts(reader)
+    pdf_annotations_sum = sum(pdf_annotations.values())
+    entry_annotation_sum = 0
+    if entry.annotations:
+        entry_annotation_sum = entry.annotations.sum()
+    if pdf_annotations_sum != entry_annotation_sum:
+        print(
+            f"❌ ERROR: Annotation count mismatch: {entry_annotation_sum} vs {pdf_annotations_sum}"
+        )
+        print("          Expected:")
+        seen_subtypes = []
+        for subtype, exp_count in sorted(entry.annotations.items()):
+            seen_subtypes.append(subtype)
+            if exp_count == 0 and pdf_annotations.get(subtype, 0) == 0:
+                continue
+            print(
+                f"          - {subtype}: {exp_count} vs {pdf_annotations.get(subtype, 0)}"
+            )
+        todo_subtypes = []
+        for subtype, count in sorted(pdf_annotations.items()):
+            if subtype not in seen_subtypes:
+                todo_subtypes.append(subtype)
+        if todo_subtypes:
+            print("          Found:")
+            for subtype, count in sorted(pdf_annotations.items()):
+                if subtype not in seen_subtypes:
+                    todo_subtypes.append(subtype)
+                    print(f"          - {subtype}: {count}")
 
 
 if __name__ == "__main__":
