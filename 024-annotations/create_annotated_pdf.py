@@ -1,5 +1,6 @@
-from fpdf import FPDF  # pip install fpdf2
 from datetime import datetime
+
+from fpdf import FPDF  # pip install fpdf2
 
 pdf = FPDF()
 pdf.set_creation_date(datetime(1990, 4, 28, 0, 0, 0))

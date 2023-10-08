@@ -24,7 +24,7 @@ class AnnotationCount(BaseModel):
             ("Widget", self.Widget if self.Widget else 0),
         ]
 
-    def sum(self):
+    def sum(self) -> int:
         return sum(value for _, value in self.items())
 
 
@@ -91,6 +91,7 @@ def pdf_to_datetime(date_str: str | None) -> datetime.datetime | None:
 
 
 def get_annotation_counts(reader: PdfReader) -> dict[str, int]:
+    """Get a dictionary with the annotation subtype counts."""
     pdf_annotations = {}
     for page in reader.pages:
         if page.annotations:
@@ -147,7 +148,7 @@ def check_meta(entry: PdfEntry) -> None:
                 f"          - {subtype}: {exp_count} vs {pdf_annotations.get(subtype, 0)}"
             )
         todo_subtypes = []
-        for subtype, count in sorted(pdf_annotations.items()):
+        for subtype, _ in sorted(pdf_annotations.items()):
             if subtype not in seen_subtypes:
                 todo_subtypes.append(subtype)
         if todo_subtypes:
