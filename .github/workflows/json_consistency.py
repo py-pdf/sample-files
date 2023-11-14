@@ -7,13 +7,19 @@ from pydantic import BaseModel, NonNegativeInt
 
 from pypdf import PdfReader
 
+import logging
+
+logger = logging.getLogger()
+
+logger.level = logging.ERROR
+
 
 class AnnotationCount(BaseModel):
-    Highlight: int | None
-    Ink: int | None
-    Link: int | None
-    Text: int | None
-    Widget: int | None
+    Highlight: int | None = None
+    Ink: int | None = None
+    Link: int | None = None
+    Text: int | None = None
+    Widget: int | None = None
 
     def items(self) -> list[tuple[str, int]]:
         return [
@@ -47,7 +53,7 @@ def main() -> None:
     """Check the consistency of the JSON metadata file."""
     with open("files.json") as f:
         data = json.load(f)
-    main_pdf = MainPdfFile.parse_obj(data)
+    main_pdf = MainPdfFile.model_validate(data)
     registered_pdfs = []
 
     seen_failure = False
