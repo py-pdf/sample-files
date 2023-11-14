@@ -317,6 +317,16 @@
                 "Highlight": 1,
                 "Ink": 1
             }
+        },
+        {
+            "path": "025-attachment/with-attachment.pdf",
+            "producer": "pypdf",
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 1,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
