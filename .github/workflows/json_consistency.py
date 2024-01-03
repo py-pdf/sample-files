@@ -63,7 +63,7 @@ def main() -> None:
             seen_failure = True
         else:
             print(f"✅ Found {entry.path}")
-            check_meta(entry)
+            seen_failure = seen_failure or check_meta(entry)
 
     # Are all files registered?
     pdf_paths = Path().glob("**/*.pdf")
@@ -109,20 +109,27 @@ def get_annotation_counts(reader: PdfReader) -> dict[str, int]:
     return pdf_annotations
 
 
-def check_meta(entry: PdfEntry) -> None:
+def check_meta(entry: PdfEntry) -> bool:
     """Check if the given entry metadata matches the extracted metadata."""
+    seen_failure = False
     try:
         reader = PdfReader(entry.path)
         if reader.is_encrypted:
-            return
+            return seen_failure
         info = reader.metadata
     except Exception:
-        return
+        return seen_failure
     if info is None:
         info = {}
     if info.get("/Producer") != entry.producer:
+        seen_failure = True
         print(
             f"❌ ERROR: Producer mismatch: {entry.producer} vs {info.get('/Producer')}",
+        )
+    if len(reader.pages) != entry.pages:
+        seen_failure = True
+        print(
+            f"❌ ERROR: Page mismatch: {len(reader.pages)} vs {entry.pages}",
         )
 
     pdf_date = pdf_to_datetime(info.get("/CreationDate"))
@@ -131,6 +138,7 @@ def check_meta(entry: PdfEntry) -> None:
         None if entry.creation_date is None else entry.creation_date.isoformat()[:19]
     )
     if pdf_date != entry_date:
+        seen_failure = True
         print(f"❌ ERROR: Creation date mismatch: {entry_date} vs {pdf_date}")
 
     # Check annotations
@@ -140,6 +148,7 @@ def check_meta(entry: PdfEntry) -> None:
     if entry.annotations:
         entry_annotation_sum = entry.annotations.sum()
     if pdf_annotations_sum != entry_annotation_sum:
+        seen_failure = True
         print(
             f"❌ ERROR: Annotation count mismatch: {entry_annotation_sum} vs {pdf_annotations_sum}"
         )
@@ -162,6 +171,7 @@ def check_meta(entry: PdfEntry) -> None:
                 if subtype not in seen_subtypes:
                     todo_subtypes.append(subtype)
                     print(f"          - {subtype}: {count}")
+    return seen_failure
 
 
 if __name__ == "__main__":
