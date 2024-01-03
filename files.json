@@ -327,6 +327,16 @@
             "images": 1,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "026-latex-multicolumn/multicolumn.pdf",
+            "producer": "pdfTeX-1.40.21",
+            "creation_date": "2024-01-03T09:38:26",
+            "encrypted": false,
+            "pages": 2,
+            "images": 0,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
