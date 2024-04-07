@@ -337,6 +337,16 @@
             "images": 0,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "027-blank-push-pop/blank.pdf",
+            "producer": "MacOS Preview",
+            "creation_date": "2021-09-22T00:16:23",
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
