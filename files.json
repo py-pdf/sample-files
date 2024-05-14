@@ -337,6 +337,16 @@
             "images": 0,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "027-onlyoffice-image/Patterns.pdf",
+            "producer": "OnlyOffice-8.0.1.31",
+            "creation_date": "2024-05-01T19:20:12",
+            "encrypted": false,
+            "pages": 1,
+            "images": 3,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
