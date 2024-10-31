@@ -8,7 +8,7 @@ The `files.json` file contains a list of those PDF files with their metadata.
 ## Licenses
 
 Every PDF in this repository is under the Creative Commons
-Attribution-NonCommercial-NoDerivs License (CC BY-NC-ND).
+Attribution-ShareAlike License (CC-BY-SA-4.0).
 
 
 ## Contributions
