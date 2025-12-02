@@ -6,7 +6,7 @@
 #
 defusedxml==0.7.1
     # via fpdf2
-fonttools==4.39.3
+fonttools==4.61.0
     # via fpdf2
 fpdf2==2.7.3
     # via -r requirements.in
