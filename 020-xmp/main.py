@@ -9,7 +9,7 @@ output = io.BytesIO()
 pdf = FPDF()
 pdf.add_page()
 pdf.set_font("Helvetica", size=12)
-pdf.cell(200, 10, txt="Hello, World!", ln=1, align="C")
+pdf.cell(200, 10, text="Hello, World!", align="C", new_x="LMARGIN", new_y="NEXT")
 pdf.output(name=output)
 output.seek(0)
 
