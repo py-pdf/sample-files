@@ -15,16 +15,22 @@ logger.level = logging.ERROR
 
 class AnnotationCount(BaseModel):
     Highlight: int | None = None
+    FileAttachment: int | None = None
     Ink: int | None = None
     Link: int | None = None
+    Polygon: int | None = None
+    Popup: int | None = None
     Text: int | None = None
     Widget: int | None = None
 
     def items(self) -> list[tuple[str, int]]:
         return [
             ("Highlight", self.Highlight if self.Highlight else 0),
-            ("Link", self.Link if self.Link else 0),
+            ("FileAttachment", self.FileAttachment if self.FileAttachment else 0),
             ("Ink", self.Ink if self.Ink else 0),
+            ("Link", self.Link if self.Link else 0),
+            ("Polygon", self.Polygon if self.Polygon else 0),
+            ("Popup", self.Popup if self.Popup else 0),
             ("Text", self.Text if self.Text else 0),
             ("Widget", self.Widget if self.Widget else 0),
         ]
