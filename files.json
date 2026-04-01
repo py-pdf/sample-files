@@ -337,6 +337,24 @@
             "images": 0,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "027-cropped-rotated-scaled/cropped-rotated-scaled.pdf",
+            "producer": "pypdf",
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 4,
+            "images": 64,
+            "forms": 1,
+            "annotations": {
+                "Highlight": 32,
+                "FileAttachment": 32,
+                "Link": 64,
+                "Polygon": 64,
+                "Popup": 64,
+                "Text": 32,
+                "Widget": 96
+            }
         }
     ]
 }
