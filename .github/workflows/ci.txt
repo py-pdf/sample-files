@@ -4,15 +4,15 @@
 #
 #    pip-compile .github/workflows/ci.in
 #
-annotated-types==0.6.0
+annotated-types==0.7.0
     # via pydantic
-pydantic==2.5.0
+pydantic==2.13.4
     # via -r .github/workflows/ci.in
-pydantic-core==2.14.1
+pydantic-core==2.46.4
     # via pydantic
 pypdf==3.17.0
     # via -r .github/workflows/ci.in
-typing-extensions==4.8.0
+typing-extensions==4.15.0
     # via
     #   pydantic
     #   pydantic-core
