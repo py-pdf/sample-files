@@ -10,7 +10,7 @@ fonttools==4.61.0
     # via fpdf2
 fpdf2==2.7.3
     # via -r requirements.in
-pillow==9.5.0
+pillow==12.2.0
     # via fpdf2
 pymupdf==1.21.1
     # via -r requirements.in
