@@ -355,6 +355,16 @@
                 "Text": 32,
                 "Widget": 96
             }
+        },
+        {
+            "path": "028-image-references-deduplication/wrong-references.pdf",
+            "producer": "LibreOffice 25.8.6.2 (X86_64)",
+            "creation_date": "2026-04-19T16:38:40",
+            "encrypted": false,
+            "pages": 3,
+            "images": 2,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
