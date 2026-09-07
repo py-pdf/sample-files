@@ -365,6 +365,16 @@
             "images": 2,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "029-optional-content-groups/ocg_map_test.pdf",
+            "producer": null,
+            "creation_date": "2026-09-02T15:53:11",
+            "encrypted": false,
+            "pages": 1,
+            "images": 3,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
