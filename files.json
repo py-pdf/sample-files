@@ -375,6 +375,38 @@
             "images": 3,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "030-tagged-pdf/tagged.pdf",
+            "producer": null,
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 3,
+            "images": 1,
+            "forms": 0,
+            "annotations": {
+                "Link": 2
+            }
+        },
+        {
+            "path": "031-png-predictors/png-predictors.pdf",
+            "producer": null,
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 2,
+            "forms": 0,
+            "annotations": {}
+        },
+        {
+            "path": "032-png-predictors-low-bit-depth/png-predictors-low-bit-depth.pdf",
+            "producer": null,
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 3,
+            "images": 6,
+            "forms": 0,
+            "annotations": {}
         }
     ]
 }
