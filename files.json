@@ -407,6 +407,18 @@
             "images": 6,
             "forms": 0,
             "annotations": {}
+        },
+        {
+            "path": "033-javascript-clock/javascript-clock.pdf",
+            "producer": null,
+            "creation_date": null,
+            "encrypted": false,
+            "pages": 1,
+            "images": 0,
+            "forms": 1,
+            "annotations": {
+                "Widget": 158
+            }
         }
     ]
 }
